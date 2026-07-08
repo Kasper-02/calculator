@@ -96,3 +96,27 @@ document.addEventListener('keydown', function(e) {
         clearAll();
     }
 });
+
+
+
+// ====== Тёмная тема ======
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+
+    if (document.body.classList.contains('dark')) {
+        themeToggle.textContent = '☀️';
+    } else {
+        themeToggle.textContent = '🌙';
+    }
+
+    const isDark = document.body.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    themeToggle.textContent = '☀️';
+}
