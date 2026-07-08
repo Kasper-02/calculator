@@ -75,3 +75,35 @@ button:active {
 .zero {
     grid-column: span 2;
 }
+
+
+body.dark {
+    background: #1a1a1a;
+}
+
+body.dark .calculator {
+    background: #1e2a36;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+body.dark .display {
+    background: #0f151c;
+    color: #e0e0e0;
+}
+
+body.dark button {
+    background: #2c3e50;
+    color: #e0e0e0;
+}
+
+body.dark .operator {
+    background: #d35400;
+}
+
+body.dark .equals {
+    background: #1e8449;
+}
+
+body.dark .clear {
+    background: #b03a2e;
+}
